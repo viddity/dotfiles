@@ -6,6 +6,8 @@
 	st = status
 	ci = commit -v
 	cia = commit --amend
+	lg = log --pretty=format:\"%C(yellow)%h%Creset %Cgreen%ar%Creset %Cblue%an%Creset %s %C(white)%d%Creset\" --graph --all
+	mine = log --pretty=format:\"%C(yellow)%h%Creset %Cgreen%ar%Creset %Cblue%an%Creset %s %C(white)%d%Creset\" --graph --all --author=verena
 [core]
 	editor = subl -w
 [color]
