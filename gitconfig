@@ -1,0 +1,15 @@
+[user]
+	name = Verena Brodbeck
+	email = verenabrodbeck@gmx.de
+[alias]
+	co = checkout
+	st = status
+[core]
+	editor = subl -w
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
