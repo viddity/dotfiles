@@ -4,6 +4,8 @@
 [alias]
 	co = checkout
 	st = status
+	ci = commit -v
+	cia = commit --amend
 [core]
 	editor = subl -w
 [color]
