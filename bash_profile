@@ -9,10 +9,22 @@ source ~/.dotfiles/git-completion.sh
 source ~/.dotfiles/git-prompt.sh
 source ~/.dotfiles/bash.prompt
 
-alias vaa='cd ~/Web/vaamo/vaamo-backend'
 
-alias play='sbt -Dconfig.file=conf/local/filedb.conf'
+### Paths
+alias vaaB='cd ~/Web/vaamo/vaamo-backend'
 
-alias playPhantom='WEBDRIVER=phantom sbt -Dconfig.file=conf/local/filedb.conf'
+alias vaaF='cd ~/Web/vaamo/vaamo-web-frontend'
 
+alias vaaDeDir='cd ~/Web/vaamo/vaamo\.de'
+
+alias vaaDeRun='source ~/Web/vaamo/vaamo\.de/venv/bin/activate; rvm gemset use vaamo-de'
+
+
+### Play Framework
+alias play='./scripts/sbt -Dconfig.file=conf/local/local.conf'
+
+alias playPhantom='WEBDRIVER=phantom ./scripts/sbt -Dconfig.file=conf/local/local.conf'
+
+
+### Git
 alias ls='ls -G'
