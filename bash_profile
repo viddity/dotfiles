@@ -13,11 +13,14 @@ source ~/.dotfiles/bash.prompt
 ### Paths
 alias vaaB='cd ~/Web/vaamo/vaamo-backend'
 
-alias vaaF='cd ~/Web/vaamo/vaamo-web-frontend'
+alias vaaDeDir='cd ~/Web/vaamo/vaamo-de-relaunch'
 
-alias vaaDeDir='cd ~/Web/vaamo/vaamo\.de'
+alias vaaRun='source ~/Web/vaamo/vaamo-de-relaunch/venv/bin/activate; rvm gemset use vaamo-de'
 
-alias vaaDeRun='source ~/Web/vaamo/vaamo\.de/venv/bin/activate; rvm gemset use vaamo-de'
+alias vaaDeDirOld='cd ~/Web/vaamo/vaamo\.de'
+
+alias vaaRunOld='source ~/Web/vaamo/vaamo\.de/venv/bin/activate; rvm gemset use vaamo-de'
+
 
 
 ### Play Framework
