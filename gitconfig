@@ -8,8 +8,10 @@
 	cia = commit --amend
 	lg = log --pretty=format:\"%C(yellow)%h%Creset %Cgreen%ar%Creset %Cblue%an%Creset %s %C(white)%d%Creset\" --graph --all
 	mine = log --pretty=format:\"%C(yellow)%h%Creset %Cgreen%ar%Creset %Cblue%an%Creset %s %C(white)%d%Creset\" --graph --all --author=verena
+	sp = smart-pull
+	sl = smart-log
 [core]
-	editor = subl -w
+	editor = vim
 [color]
 	branch = auto
 	diff = auto
@@ -19,3 +21,7 @@
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

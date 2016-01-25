@@ -2,7 +2,11 @@
 
 ### Added by the Heroku Toolbelt
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/heroku/bin:$PATH"
-export PATH="$PATH:$HOME/.rvm/bin:/usr/local/rvm/bin" 
+export PATH="$PATH:$HOME/.rvm/bin:/usr/local/rvm/bin"
+
+### Artifactory user credentials = vaamo internal SBT dependencies
+export REPO_USER="verena.brodbeck"
+export REPO_PASS="{DESede}naGMuh2DwkhaPQfr7R7Q5w=="
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 source ~/.dotfiles/git-completion.sh
@@ -13,15 +17,13 @@ source ~/.dotfiles/bash.prompt
 ### Paths
 alias vaaB='cd ~/Web/vaamo/vaamo-backend'
 
-alias vaaDeDir='cd ~/Web/vaamo/vaamo-de-relaunch'
+alias vaaDeDir='cd ~/Web/vaamo/vaamo\.de'
 
-alias vaaRun='source ~/Web/vaamo/vaamo-de-relaunch/venv/bin/activate; rvm gemset use vaamo-de'
+alias vaaComDir='cd ~/Web/vaamo/vaamo\.com'
 
-alias vaaDeDirOld='cd ~/Web/vaamo/vaamo\.de'
+alias vaaRun='source ~/Web/vaamo/vaamo\.de/venv/bin/activate; rvm gemset use vaamo-de'
 
-alias vaaRunOld='source ~/Web/vaamo/vaamo\.de/venv/bin/activate; rvm gemset use vaamo-de'
-
-
+alias cookbook='cd ~/Web/vaamo/cookbooks/vaamo_frontpage'
 
 ### Play Framework
 alias play='./scripts/sbt -Dconfig.file=conf/local/local.conf'
