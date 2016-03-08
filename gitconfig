@@ -1,27 +1,33 @@
 [user]
-	name = Verena Brodbeck
-	email = verenabrodbeck@gmx.de
+  name = Verena Brodbeck
+  email = verenabrodbeck@gmx.de
 [alias]
-	co = checkout
-	st = status
-	ci = commit -v
-	cia = commit --amend
-	lg = log --pretty=format:\"%C(yellow)%h%Creset %Cgreen%ar%Creset %Cblue%an%Creset %s %C(white)%d%Creset\" --graph --all
-	mine = log --pretty=format:\"%C(yellow)%h%Creset %Cgreen%ar%Creset %Cblue%an%Creset %s %C(white)%d%Creset\" --graph --all --author=verena
-	sp = smart-pull
-	sl = smart-log
+  co = checkout
+  st = status
+  ci = commit -v
+  cia = commit --amend
+  lg = log --pretty=format:\"%C(yellow)%h%Creset %Cgreen%ar%Creset %Cblue%an%Creset %s %C(white)%d%Creset\" --graph --all
+  mine = log --pretty=format:\"%C(yellow)%h%Creset %Cgreen%ar%Creset %Cblue%an%Creset %s %C(white)%d%Creset\" --graph --all --author=verena
+  sp = smart-pull
+  sl = smart-log
 [core]
-	editor = vim
+  editor = vim
 [color]
-	branch = auto
-	diff = auto
-	status = auto
-	ui = true
+  branch = auto
+  diff = auto
+  status = auto
+  ui = true
 [filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true

@@ -26,10 +26,11 @@ alias vaaRun='source ~/Web/vaamo/vaamo\.de/venv/bin/activate; rvm gemset use vaa
 alias cookbook='cd ~/Web/vaamo/cookbooks/vaamo_frontpage'
 
 ### Play Framework
-alias play='./scripts/sbt -Dconfig.file=conf/local/local.conf'
-
-alias playPhantom='WEBDRIVER=phantom ./scripts/sbt -Dconfig.file=conf/local/local.conf'
-
+alias play='./scripts/console.sh'
 
 ### Git
 alias ls='ls -G'
+
+### NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
