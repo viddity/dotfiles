@@ -17,11 +17,11 @@ source ~/.dotfiles/bash.prompt
 ### Paths
 alias vaaB='cd ~/Web/vaamo/vaamo-backend'
 
+alias sol='cd ~/Web/vaamo/sol-frontend'
+
 alias vaaDeDir='cd ~/Web/vaamo/vaamo\.de'
 
 alias vaaComDir='cd ~/Web/vaamo/vaamo\.com'
-
-alias vaaRun='source ~/Web/vaamo/vaamo\.de/venv/bin/activate; rvm gemset use vaamo-de'
 
 alias cookbook='cd ~/Web/vaamo/cookbooks/vaamo_frontpage'
 
