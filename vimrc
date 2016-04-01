@@ -1,5 +1,10 @@
-set nocompatible
+set nocompatible          " Don't force vi compatibility
 filetype off
+
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" Vundle
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -35,9 +40,24 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" color scheme
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+" ask BENJAMIN what does this do?
+behave xterm
+
+set term=xterm-256color
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+
 " colorscheme delek
 " colorscheme monokai
-colorscheme solarized
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 let g:jsx_ext_required = 0
 
 set shell=bash
@@ -46,10 +66,10 @@ set autoread
 set hidden
 set viminfo=
 set noesckeys
-
-set number
+set number                        " always show line number
 set relativenumber                " Show relative line numbers
 syntax on                         " Enable syntax highlighting
+syntax enable
 set ruler                         " Show current position in status bar
 set cursorline                    " Highlight current line
 set synmaxcol=800                 " Don’t highlight lines longer than 800 chars
@@ -60,17 +80,12 @@ set scrolloff=5                   " Keep at least 5 lines above/below
 set title                         " Change terminal title
 set showmode                      " Always show current mode
 set laststatus=2                  " Make sure airline isn’t hidden
-let g:airline_powerline_fonts = 1 " Custom airline font
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
+set showmatch                     " show matching brackets
 set shortmess=atI                 " Hide intro message
 set showcmd                       " Show command as it’s being typed
 set list                          " Show invisible characters
 set noerrorbells                  " Disable bells
 set wildmenu                      " Enhance command-line completion
-
 set clipboard=unnamed             " Use the system clipboard
 set et                            " Pressing TAB creates spaces instead
 set tabstop=2
@@ -84,6 +99,12 @@ set completeopt-=preview          " Disable scratch preview buffer
 set ttyfast
 set encoding=utf-8 nobomb         " Use UTF-8 without BOM
 set nojoinspaces                  " Don’t double space after join
+
+let g:airline_powerline_fonts = 1 " Custom airline font
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
 
 " Auto-reload vim when vimrc changes
 augroup myvimrc
