@@ -12,8 +12,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'gre/play2vim'
 Plugin 'quanganhdo/grb256'
 set t_Co=256
-colorscheme delek
-" colorscheme grb256
 
 Plugin 'bling/vim-airline'
 Plugin 'mileszs/ack.vim'
@@ -21,6 +19,9 @@ Plugin 'wincent/command-t'
 
 " LANGUAGE SPECIFIC PLUGINS
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -33,6 +34,11 @@ filetype plugin indent on    " required
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+
+" colorscheme delek
+" colorscheme monokai
+colorscheme solarized
+let g:jsx_ext_required = 0
 
 set shell=bash
 set lazyredraw
