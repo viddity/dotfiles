@@ -17,7 +17,7 @@ source ~/.dotfiles/bash.prompt
 ### Paths
 alias vaaB='cd ~/Web/vaamo/vaamo-backend'
 
-alias sol='cd ~/Web/vaamo/sol-frontend'
+alias sara='cd ~/Web/vaamo/sara'
 
 alias vaaDeDir='cd ~/Web/vaamo/vaamo\.de'
 
