@@ -1,7 +1,6 @@
 set nocompatible          " Don't force vi compatibility
 filetype off
 
-
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " Vundle
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -18,6 +17,12 @@ Plugin 'gre/play2vim'
 Plugin 'quanganhdo/grb256'
 set t_Co=256
 
+
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" Plugins
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Plugin 'bling/vim-airline'
 Plugin 'mileszs/ack.vim'
 Plugin 'wincent/command-t'
@@ -27,6 +32,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'derekwyatt/vim-scala'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,19 +51,20 @@ filetype plugin indent on    " required
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 " ask BENJAMIN what does this do?
-behave xterm
+"behave xterm
 
 set term=xterm-256color
+" colorscheme solarized
 set background=dark
-colorscheme solarized
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 
 " colorscheme delek
-" colorscheme monokai
+colorscheme monokai
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+let javascript_enable_domhtmlcss= 0
 let g:jsx_ext_required = 0
 
 set shell=bash
